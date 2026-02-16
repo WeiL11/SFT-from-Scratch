@@ -14,6 +14,13 @@ Aligning Qwen2.5-Math-1.5B on GSM8K via SFT and Expert Iteration, using vLLM for
 |----------|-----------------|
 | **Qwen_GSM8K_Run_GPUs.ipynb** | During training: `[Step N] Accuracy: X%, Format Score: Y%`. After a run: `Experiment complete. Model: ..., Val Acc: X%` |
 | **Qwen_GSM8K_Tuned_GPUs.ipynb** | Each run: `→ Val Accuracy: X%`. Aggregate cell: `Best: run_id → X%` and best model path |
+| **Qwen_GSM8K_FineTuned.ipynb** | Filter block: `Filtered dataset size: N / M`. Report block: dataset size, val accuracy curve plot. Compare block: filtered vs previous SFT |
+
+## Notebooks Overview
+
+- **Qwen_GSM8K_Run_GPUs.ipynb** — SFT on full or sized GSM8K (2× H100)
+- **Qwen_GSM8K_Tuned_GPUs.ipynb** — Hyperparameter tuning (lr, batch size)
+- **Qwen_GSM8K_FineTuned.ipynb** — Filter to correct-answer examples only, then SFT; report size and accuracy curve; compare to unfiltered
 
 ## Tech Stack
 
