@@ -1,0 +1,20 @@
+# Update pip first: pip install --upgrade pip
+
+# PyTorch
+torch
+torchvision
+torchaudio
+
+# ML / NLP
+vllm
+transformers
+datasets
+accelerate
+
+# Logging & utilities
+wandb
+numpy
+pandas
+
+# Flash Attention (install after above: pip install flash-attn --no-build-isolation)
+flash-attn
