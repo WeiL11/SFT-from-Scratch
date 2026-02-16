@@ -11,3 +11,18 @@ env/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Secrets & credentials (never commit these)
+.env
+.env.local
+.env.*.local
+*.pem
+secrets/
+credentials/
+
+# Fetched remote data (contains your instance data)
+remote_backup/
+
+# Results / outputs
+gsm8k_results_100.jsonl
+experiments/
