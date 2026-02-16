@@ -72,7 +72,15 @@ ssh -p $VAST_SSH_PORT $VAST_SSH_HOST "
 "
 ```
 
-## Or run the script
+## Backup then clean (recommended – never overwrites old saves)
+```bash
+export VAST_SSH_HOST="root@YOUR_HOST"
+export VAST_SSH_PORT="YOUR_PORT"
+./backup_then_clean.sh
+```
+Backs up to `remote_backup/backup_YYYYMMDD_HHMMSS/` (timestamped), then cleans the remote. Each run creates a new folder.
+
+## Or run the fetch script (overwrites same dest)
 ```bash
 chmod +x fetch_and_clean_remote.sh
 VAST_SSH_HOST=root@YOUR_HOST VAST_SSH_PORT=YOUR_PORT LOCAL_DEST=$HOME/remote_backup ./fetch_and_clean_remote.sh
