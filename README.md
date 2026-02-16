@@ -8,19 +8,11 @@ Aligning Qwen2.5-Math-1.5B on GSM8K via SFT and Expert Iteration, using vLLM for
 - **Resolved** multi-GPU orchestration to run training and inference on separate devices (e.g., train on GPU 0, evaluate with vLLM on GPU 1)
 - **Aligned** Qwen2.5-Math to produce answers in a target format (e.g., `<think>...reasoning...</think>`), improving consistency and downstream usability
 
-## Where to See Results
+## Where to See Results (in the notebook)
 
-After running SFT experiments:
-
-| Location | Contents |
-|----------|----------|
-| `experiments/{run_name}/final_model/` | Trained model + tokenizer (~3 GB) |
-| `experiments/{run_name}/run_info.json` | Validation accuracy, model path, config for that run |
-| `experiments/tune_results/tune_summary_*.json` | Comparison of tuning runs; `best` field = best config and model path |
-
-**Which model is best?**  
-- Single run: open `experiments/{run_name}/run_info.json` → `val_accuracy`  
-- Tuning runs: open `experiments/tune_results/tune_summary_*.json` → `best.model_path`, `best.val_accuracy`
+- **During training:** Each eval step prints `[Step N] Accuracy: X% | Format Score: Y%`
+- **After a run:** The cell prints `Experiment complete. Model: ... | Val Acc: X%`
+- **Tuning runs:** Each run prints `→ Val Accuracy: X%`; the aggregate cell prints `Best: run_id → X%` and the best model path
 
 ## Tech Stack
 
