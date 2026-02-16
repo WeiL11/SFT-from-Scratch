@@ -10,9 +10,10 @@ Aligning Qwen2.5-Math-1.5B on GSM8K via SFT and Expert Iteration, using vLLM for
 
 ## Where to See Results (in the notebook)
 
-- **During training:** Each eval step prints `[Step N] Accuracy: X% | Format Score: Y%`
-- **After a run:** The cell prints `Experiment complete. Model: ... | Val Acc: X%`
-- **Tuning runs:** Each run prints `→ Val Accuracy: X%`; the aggregate cell prints `Best: run_id → X%` and the best model path
+| Notebook | What to look at |
+|----------|-----------------|
+| **Qwen_GSM8K_Run_GPUs.ipynb** | During training: `[Step N] Accuracy: X%, Format Score: Y%`. After a run: `Experiment complete. Model: ..., Val Acc: X%` |
+| **Qwen_GSM8K_Tuned_GPUs.ipynb** | Each run: `→ Val Accuracy: X%`. Aggregate cell: `Best: run_id → X%` and best model path |
 
 ## Tech Stack
 
